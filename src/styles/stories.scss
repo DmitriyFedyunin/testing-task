@@ -1,0 +1,147 @@
+.stories {
+  width: 100%;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(610px, 1fr));
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  background-color: #f2f2f2;
+
+  @media all and (max-width: 1300px) {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  @media all and (max-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  .story {
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+
+    &__image {
+      max-height: 200px;
+      border-radius: 5px;
+      margin: 0 15px 0 0;
+
+      @media all and (max-width: 1250px) {
+        width: 150px;
+        height: 100px;
+      }
+    }
+
+    &__title {
+      margin: 0 0 15px;
+      font-size: 22px;
+      @media all and (max-width: 1024px) {
+        font-size: 18px;
+        margin: 0 0 12px;
+      }
+
+      @media all and (max-width: 600px) {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+    }
+
+    &__author {
+      &-name, &-karma {
+        font-size: 14px;
+        margin: 0 0 5px;
+
+        @media all and (max-width: 600px) {
+          font-size: 12px;
+          margin: 0 0 5px;
+        }
+      }
+    }
+
+    &__url {
+      font-size: 13px;
+      @media all and (max-width: 600px) {
+        font-size: 12px;
+        margin: 0 0 5px;
+      }
+    }
+
+    &__sup-info {
+      font-weight: bold;
+      margin: 5px 0 0;
+
+      @media all and (max-width: 600px) {
+        font-size: 12px;
+        margin: 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .story__score {
+        margin: 0 0 0 10px;
+        @media all and (max-width: 600px) {
+          margin: 5px 0 0;
+        }
+      }
+    }
+
+    .value {
+      font-weight: normal;
+    }
+  }
+}
+
+.sorting {
+  display: flex;
+  width: 100%;
+  background: #f2f2f2;
+  padding: 20px 20px 0;
+
+  @media all and (max-width: 600px) {
+
+  }
+
+  &__variant {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: bold;
+      margin: 0 15px 0 0;
+
+      @media all and (max-width: 600px) {
+        font-size: 13px;
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+
+  &__value {
+    padding: 5px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+
+    @media all and (max-width: 600px) {
+      width: 70px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      border: 1px solid #cccccc;
+    }
+    
+    &--selected {
+      background-color: #ccc;
+      color: #fff;
+    }
+  }
+}
